@@ -5,7 +5,7 @@
     "type": "Full App", 
     "contributed_by": "Community", 
     "repo_url": "https://github.com/redis-developer/trackerNgin/tree/master", 
-    "download_url": "https://github.com/redis-developer/trackerNgin.git",
+    "download_url": "https://github.com/redis-developer/trackerNgin/archive/main.zip",
     "hosted_url": "https://locatorservices.ngintec.com", 
     "deploy_buttons": [
         {
@@ -20,10 +20,12 @@
     "redis_features": [],
     "redis_modules": ["RediSearch"], 
     "app_image_urls": [
-         "https://github.com/ngintec/trackerNgin/blob/master/ss/user.png","https://github.com/ngintec/trackerNgin/blob/master/ss/tracker.png","https://github.com/ngintec/trackerNgin/blob/master/ss/trackee.png"], 
-   
+         "https://github.com/ngintec/trackerNgin/blob/master/ss/user.png",
+         "https://github.com/ngintec/trackerNgin/blob/master/ss/tracker.png",
+         "https://github.com/ngintec/trackerNgin/blob/master/ss/trackee.png"
+     ], 
     "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo",
     "special_tags": ["Hackathon", "Paid"], 
     "verticals": ["Healthcare", "Oil & Gas", "Tourism"], 
-    "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md", 
+    "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md"
 }
