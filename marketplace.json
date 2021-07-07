@@ -1,23 +1,29 @@
 {
-    "app_name": "TrackerNgin",  //Name of the app
-    "description": "Locater Services for On the Go vehicles and more", // One line description
-    "hidden": "true", // Can be "true" or "false". If true, this app won't show up in Marketplace.
-    "rank": "30", // This is used to sort the apps in the marketplace. 1 to 20 are reserved. Enter greater than 20
-    "type": "Full App", //Can be "Building Block" or "Full App"
-    "contributed_by": "Community", // Can be "Redis Labs" or "Community" or "Partner"
-    "repo_url": "https://github.com/ngintec/trackerNgin/tree/master", //This is the Gitub Repo's URL.
-    "download_url": "https://github.com/ngintec/trackerNgin.git",//This is a direct link to the Github's download button so people can download it directly from the Marketplace
-    "hosted_url": "https://locatorservices.ngintec.com", //The URL of the app. if you are hosting this app somewhere
-    "quick_deploy": "False", //"frue" if the project has Heroku, Vercel, Google deploy buttons
-    "deploy_buttons": [],//Deploy buttons for "heroku", "vercel" or "Google" in the form of objects.
-    "language": ["Javascript","ReactNative","Python", "Django", "REDIS"], // Backend technologies: "JavaScript", "Java", "Python", "Go", "C#", "Ruby", "PHP", etc. 
-    "redis_commands": ["FT.SEARCH","HSET", "GEORADIUS", "HEXISTS", "RPUSH", "LPOP"], // Enter all the Redis commands
-    "redis_features": [],// Enter any core Redis feature or leave it blank.
-    "redis_modules": ["RediSearch"], //Value can be one or more of "RediJSON", "", "RedisTimeseries", "RedisAI"  "RedisGears" or "RedisGraph" listed in an array. 
+    "app_name": "TrackerNgin",  
+    "description": "Locater Services for On the Go vehicles and more using RediSearch", 
+    "rank": "232", 
+    "type": "Full App", 
+    "contributed_by": "Community", 
+    "repo_url": "https://github.com/redis-developer/trackerNgin/tree/master", 
+    "download_url": "https://github.com/redis-developer/trackerNgin.git",
+    "hosted_url": "https://locatorservices.ngintec.com", 
+    "deploy_buttons": [
+        {
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/trackerNgin.git" 
+        },
+        {
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/trackerNgin.git" 
+        }
+    ],
+    "language": ["Javascript","ReactNative","Python", "Django", "REDIS"],  
+    "redis_commands": ["FT.SEARCH","HSET", "GEORADIUS", "HEXISTS", "RPUSH", "LPOP"], 
+    "redis_features": [],
+    "redis_modules": ["RediSearch"], 
     "app_image_urls": [
-    "https://github.com/ngintec/trackerNgin/blob/master/ss/user.png","https://github.com/ngintec/trackerNgin/blob/master/ss/tracker.png","https://github.com/ngintec/trackerNgin/blob/master/ss/trackee.png"], // Provide any image urls in an array.
-    "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo", //Provide a Youtube link to your app's video
-    "special_tags": ["Hackathon", "Paid"], // "Hackathon", "Paid", or any event names.
-    "verticals": ["Healthcare", "Oil & Gas", "Tourism"], // Can be: "Healthcare", "Financial", "Tourism", "Retail", "Oil & Gas", "Manufacturing", "Technology","Education", "Construction"  
-    "markdown": "https://raw.githubusercontent.com/ngintec/trackerNgin/master/readme.md", // Link to the RAW Markdown.
+         "https://github.com/ngintec/trackerNgin/blob/master/ss/user.png","https://github.com/ngintec/trackerNgin/blob/master/ss/tracker.png","https://github.com/ngintec/trackerNgin/blob/master/ss/trackee.png"], 
+   
+    "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo",
+    "special_tags": ["Hackathon", "Paid"], 
+    "verticals": ["Healthcare", "Oil & Gas", "Tourism"], 
+    "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md", 
 }
