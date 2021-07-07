@@ -26,6 +26,6 @@
      ], 
     "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo",
     "special_tags": ["Hackathon"], 
-    "verticals": ["Healthcare", "Oil & Gas", "Tourism"], 
+    "verticals": ["Healthcare"], 
     "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md"
 }
