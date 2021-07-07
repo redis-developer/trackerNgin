@@ -4,8 +4,8 @@
     "rank": "232", 
     "type": "Full App", 
     "contributed_by": "Community", 
-    "repo_url": "https://github.com/redis-developer/trackerNgin/tree/master", 
-    "download_url": "https://github.com/redis-developer/trackerNgin/archive/main.zip",
+    "repo_url": "https://github.com/redis-developer/trackerNgin", 
+    "download_url": "https://github.com/redis-developer/trackerNgin/archive/master.zip",
     "hosted_url": "https://locatorservices.ngintec.com", 
     "deploy_buttons": [
         {
@@ -27,5 +27,5 @@
     "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo",
     "special_tags": ["Hackathon"], 
     "verticals": ["Healthcare", "Oil & Gas", "Tourism"], 
-    "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/main/readme.md"
+    "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md"
 }
