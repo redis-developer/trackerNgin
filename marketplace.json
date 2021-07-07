@@ -7,6 +7,7 @@
     "repo_url": "https://github.com/redis-developer/trackerNgin", 
     "download_url": "https://github.com/redis-developer/trackerNgin/archive/master.zip",
     "hosted_url": "https://locatorservices.ngintec.com", 
+    "quick_deploy": "true",
     "deploy_buttons": [
         {
             "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/trackerNgin.git" 
