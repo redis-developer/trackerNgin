@@ -36,20 +36,20 @@
 #### 4. Send message to online users ( 1 to 1 and 1 to all)
 
 ## How redis helps us
-### - Redis HASH key allows us to store info
-### - Redis SEARCH Helps Tracker to get the location of all Trackees and authenticate using multiple parameters ( email and phone )
-###	- Redis GEO helps us to give the distance ( GEO RADIUS )
-### - Redis RPUSH and LPOP works to perform simple emergency PERSISTENT messaging
+- Redis HASH key allows us to store info
+ - Redis SEARCH Helps Tracker to get the location of all Trackees and authenticate using multiple parameters ( email and phone )
+	- Redis GEO helps us to give the distance ( GEO RADIUS )
+ - Redis RPUSH and LPOP works to perform simple emergency PERSISTENT messaging
 
 ## Feeding data
-#### Api calls to exsting GPS location providers
-#### Simple Mobile app ( for trackees )
-#### Browser based interface ( mainly for trackers and users ).
+- Api calls to exsting GPS location providers
+- Simple Mobile app ( for trackees )
+- Browser based interface ( mainly for trackers and users ).
 
 
 ## How it works
-#### There is a flag in the API app setting to sync with RDBMS [Refer install doc](	/install.md) 
-#### we have following FT indexes for RediSearch
+- There is a flag in the API app setting to sync with RDBMS [Refer install doc](	/install.md) 
+- We have following FT indexes for RediSearch
 
 ###Note the indexes and how they are called
 ```
