@@ -21,9 +21,9 @@
     "redis_features": [],
     "redis_modules": ["RediSearch"], 
     "app_image_urls": [
-         "https://github.com/ngintec/trackerNgin/blob/master/ss/user.png",
-         "https://github.com/ngintec/trackerNgin/blob/master/ss/tracker.png",
-         "https://github.com/ngintec/trackerNgin/blob/master/ss/trackee.png"
+         "https://raw.githubusercontent.com/redis-developer/trackerNgin/blob/master/ss/user.png",
+         "https://raw.githubusercontent.com/redis-developer/trackerNgin/blob/master/ss/tracker.png",
+         "https://raw.githubusercontent.com/redis-developer/trackerNgin/blob/master/ss/trackee.png"
      ], 
     "youtube_url": "https://www.youtube.com/watch?v=O0nY_AL_AFo",
     "special_tags": ["Hackathon"], 
