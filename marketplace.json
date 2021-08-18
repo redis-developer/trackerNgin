@@ -17,7 +17,7 @@
             "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/trackerNgin.git" 
         }
     ],
-    "language": ["Javascript","ReactNative","Python", "Django", "REDIS"],  
+    "language": ["Javascript","ReactNative","Python", "Django"],  
     "redis_commands": ["FT.SEARCH","HSET", "GEORADIUS", "HEXISTS", "RPUSH", "LPOP"], 
     "redis_features": [],
     "redis_modules": ["RediSearch"], 
