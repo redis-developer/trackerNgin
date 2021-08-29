@@ -1,7 +1,7 @@
 {
     "app_name": "TrackerNgin",  
     "description": "Locater Services for On the Go vehicles and more using RediSearch", 
-    "rank": "232", 
+    "rank": 128, 
     "type": "Full App", 
     "contributed_by": "Community", 
     "repo_url": "https://github.com/redis-developer/trackerNgin", 
