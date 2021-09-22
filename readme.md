@@ -48,7 +48,7 @@
 
 
 ## How it works
-- There is a flag in the API app setting to sync with RDBMS [Refer install doc](	/install.md) 
+- There is a flag in the API app setting to sync with RDBMS.
 - We have following FT indexes for RediSearch
 
 ###Note the indexes and how they are called
@@ -147,7 +147,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 6. Once the user turns on  tracking switch.
 
 	1. Trackee
-		- Note: Trackee has a [mobile app](https://github.com/ngintec/trackernginmobileapp.git) as well 
+		- Note: Trackee has a [mobile app](https://github.com/redis-developer/trackernginmobileapp.git) as well 
 		- ![Interface for  Trackee](https://locatorservices.ngintec.com/ss/trackee.png)
 		- Trackee's need to add their trackers .they can have multiple trackers.
 			- ![screen](https://locatorservices.ngintec.com/ss/addtracker.png) ![screen](https://locatorservices.ngintec.com/ss/viewtrackers.png) ![screen](https://locatorservices.ngintec.com/ss/deletetracker.png)
