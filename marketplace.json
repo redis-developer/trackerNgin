@@ -1,33 +1,33 @@
 {
-    "app_name": "TrackerNgin",  
-    "description": "Locater Services for On the Go vehicles and more using RediSearch", 
-    "rank": 128, 
-    "type": "Full App", 
-    "contributed_by": "Community", 
-    "repo_url": "https://github.com/redis-developer/trackerNgin", 
+    "app_name": "TrackerNgin",
+    "description": "Locater Services for On the Go vehicles and more using Redis Search",
+    "rank": 128,
+    "type": "Full App",
+    "contributed_by": "Community",
+    "repo_url": "https://github.com/redis-developer/trackerNgin",
     "preview_image_url": "https://raw.githubusercontent.com/redis-developer/trackerngin/master/images/app_preview_image.png",
     "download_url": "https://github.com/redis-developer/trackerNgin/archive/master.zip",
-    "hosted_url": "", 
+    "hosted_url": "",
     "quick_deploy": "false",
     "deploy_buttons": [
         {
-            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/trackerNgin.git" 
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/trackerNgin.git"
         },
         {
-            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/trackerNgin.git" 
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/trackerNgin.git"
         }
     ],
-    "language": ["Javascript","ReactNative","Python", "Django"],  
-    "redis_commands": ["FT.SEARCH","HSET", "GEORADIUS", "HEXISTS", "RPUSH", "LPOP"], 
-    "redis_features": [],
-    "redis_modules": ["RediSearch"], 
+    "language": ["Javascript","ReactNative","Python", "Django"],
+    "redis_commands": ["FT.SEARCH","HSET", "GEORADIUS", "HEXISTS", "RPUSH", "LPOP"],
+    "redis_use_cases": [],
+    "redis_features": ["Search and Query"],
     "app_image_urls": [
          "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/ss/user.png",
          "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/ss/tracker.png",
          "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/ss/trackee.png"
-     ], 
+     ],
     "youtube_url": "https://www.youtube.com/watch?v=cYBv9qJeOdM",
-    "special_tags": ["Hackathon"], 
-    "verticals": ["Healthcare"], 
+    "special_tags": ["Hackathon"],
+    "verticals": ["Healthcare"],
     "markdown": "https://raw.githubusercontent.com/redis-developer/trackerNgin/master/readme.md"
 }
