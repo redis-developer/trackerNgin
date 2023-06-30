@@ -1,11 +1,11 @@
-# Why TrackerNgin 
-- To help Public and emergency Services 
+# Why TrackerNgin
+- To help Public and emergency Services
  	- With location of their vehicles
 	- Communicate with Trackee
 - To help users Find these service vehicles That is nearest to them.
 
-## Key Terms 
-#### 1. The Tracker/Services : 
+## Key Terms
+#### 1. The Tracker/Services :
 	- Ambulance Command Center
 	- Public Transport Command Center
 	- Police Vehicle Command Center
@@ -49,12 +49,12 @@
 
 ## How it works
 - There is a flag in the API app setting to sync with RDBMS.
-- We have following FT indexes for RediSearch
+- We have following FT indexes for Redis Search
 
 ###Note the indexes and how they are called
 ```
 ############################
-#InDexes redisearch        #
+#InDexes Redis Search      #
 ############################
 #FT.CREATE idx:users ON hash PREFIX 1 "users:" SCHEMA searchable_email TEXT SORTABLE phone TEXT SORTABLE password TEXT SORTABLE
 #searchable email is created to avoid issues with "@" in email
@@ -68,7 +68,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 ###############################
 ```
 
-1. Register 
+1. Register
 	1. User enters details and submits
 		- *check if user exists on redis*
 		```
@@ -83,17 +83,17 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 	3. Data looks like
 		- users {
 			- email: text, as in id@domain.com,
-			- phone: text, 
+			- phone: text,
 			- password: text ( hashed ),
-			- Token: text , 
-			- isTracker: "True" or "False" , 
-			- exposed: "True" or "False" , 
+			- Token: text ,
+			- isTracker: "True" or "False" ,
+			- exposed: "True" or "False" ,
 			- searchable_email: stored as fn_ln_domain_com,
-			- alias: text , 
+			- alias: text ,
 			- Verification_Code: text (random generated),
-			- email_verified: "True" or "False", 
-			- Trackers: "[list of trackers]", 
-			- Location: "[longi, lati]", 
+			- email_verified: "True" or "False",
+			- Trackers: "[list of trackers]",
+			- Location: "[longi, lati]",
 			- last_update: date as string
 			}
 		- Trackers and Locations are arrays stored as string
@@ -107,7 +107,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 	```
 	db_Veri_Code= RedisClient.hget("users:{}".format(phone),'Verification_Code')
 	 ```
-	3. if codes match email_verified is set to True and 
+	3. if codes match email_verified is set to True and
 	```
 	RedisClient.hset('users:{}'.format(phone), mapping={"email_verified":"True", "Verification_Code":new_code})
 	```
@@ -115,7 +115,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 	3. if RDBMS sync is on , data is written to rdbms else its all upto redis
 
 
-3. Login 
+3. Login
 	1. User is authenticated
 		- Check if user exists on redis
 		```
@@ -137,7 +137,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 
 
 4. Load the UI
-	-  ![screen](https://locatorservices.ngintec.com/ss/usersettings.png) 
+	-  ![screen](https://locatorservices.ngintec.com/ss/usersettings.png)
 
 5. For All calls needing registered user authentication is done based on token and id
 	```
@@ -147,7 +147,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 6. Once the user turns on  tracking switch.
 
 	1. Trackee
-		- Note: Trackee has a [mobile app](https://github.com/redis-developer/trackernginmobileapp.git) as well 
+		- Note: Trackee has a [mobile app](https://github.com/redis-developer/trackernginmobileapp.git) as well
 		- ![Interface for  Trackee](https://locatorservices.ngintec.com/ss/trackee.png)
 		- Trackee's need to add their trackers .they can have multiple trackers.
 			- ![screen](https://locatorservices.ngintec.com/ss/addtracker.png) ![screen](https://locatorservices.ngintec.com/ss/viewtrackers.png) ![screen](https://locatorservices.ngintec.com/ss/deletetracker.png)
@@ -169,7 +169,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 			```
 			RedisClient.hset("users:{}".format(phone),key='Location',value=str(location))
 			```
-			- *updateFrequency can be changed on the fly and is not stored in backend* 
+			- *updateFrequency can be changed on the fly and is not stored in backend*
 			- ![screen](https://locatorservices.ngintec.com/ss/updateFrequency.png)
 
 		- Trackee can update alias --> this is valid when same drivers drive different bus numbers.
@@ -200,7 +200,7 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 
 
 7. Tracker and Trackee can message each other and other ( all ) in case of emergencies.
-	* uses redis pubsub and Server side events * 
+	* uses redis pubsub and Server side events *
 	```
 	#publish a message
 		RedisMq.rpush("messages:{}".format(Msg_to), json.dumps(message))
@@ -215,14 +215,14 @@ trackers_idx = Client('idx:trackers', conn=RedisClient)
 8. Logout
 	1. Clear all stored credentials
 
-## For Nomal users 
+## For Nomal users
 
 - ![Interface for  User](https://locatorservices.ngintec.com/ss/user.png)
 
 1. No login is required
 
 2. They choose the service from list
-	- The list is obtained using redisearch idx:trackerlist
+	- The list is obtained using Redis Search idx:trackerlist
 
 	```
 	trackerList_idx.search("@isTracker:True  @exposed:True")
